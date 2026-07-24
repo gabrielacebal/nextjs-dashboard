@@ -4,7 +4,8 @@
     "build": "next build",
     "dev": "next dev --turbopack",
     "start": "next start",
-    "seed": "tsx --env-file=.env ./scripts/seed.js"
+    "seed": "tsx --env-file=.env ./scripts/seed.js",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
@@ -31,6 +32,8 @@
     "@types/node": "22.10.7",
     "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
+    "eslint": "^10.8.0",
+    "eslint-config-next": "^16.2.11",
     "tsx": "^4.23.1"
   },
   "pnpm": {

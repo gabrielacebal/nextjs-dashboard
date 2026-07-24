@@ -1,4 +1,5 @@
-import { updateInvoice } from '@/app/lib/actions';
+import { updateInvoice, State } from '@/app/lib/actions';
+import { useActionState } from 'react';
  
 export default function EditInvoiceForm({
   invoice,
@@ -7,7 +8,9 @@ export default function EditInvoiceForm({
   invoice: InvoiceForm;
   customers: CustomerField[];
 }) {
+  const initialState: State = { message: null, errors: {} };
   const updateInvoiceWithId = updateInvoice.bind(null, invoice.id);
+  const [state, formAction] = useActionState(updateInvoiceWithId, initialState);
  
-  return <form action={updateInvoiceWithId}>{/* ... */}</form>;
+  return <form action={formAction}>{/* ... */}</form>;
 }
