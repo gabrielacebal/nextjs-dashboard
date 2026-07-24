@@ -6,6 +6,11 @@ import Search from '@/app/ui/search';
 import { CreateInvoice } from '@/app/ui/invoices/buttons';
 import Table from '@/app/ui/invoices/table';
 import { InvoicesTableSkeleton } from '../../ui/skeletons';
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: 'Invoices | Acme Dashboard',
+};
 
 export default async function InvoicesPage(props: {
   searchParams?: Promise<{
